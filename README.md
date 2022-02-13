@@ -1,4 +1,4 @@
-This is our personal slackbuils collection for Slackware 15.0.
+This is my personal slackbuils collection for Slackware 15.0.
 
 sources - source code archives
 slackbuilds - scripts to build a package
