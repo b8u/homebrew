@@ -1,6 +1,7 @@
 FROM liveslak/slackware:base_x64_15.0
 
 RUN slackpkg update
+RUN slackpkg update gpg
 RUN slackpkg -batch=on -default_answer=y install \
 	make \
 	guile \

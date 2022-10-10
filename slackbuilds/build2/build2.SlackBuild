@@ -25,7 +25,7 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=build2
-VERSION=${VERSION:-0.14.0}
+VERSION=${VERSION:-0.15.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 PKGTYPE=${PKGTYPE:-tgz}
@@ -70,7 +70,7 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-# It stores config files in build2-toolchain-0.14 (without '.0' in the end).
+# It stores config files in build2-toolchain-0.15 (without '.0' in the end).
 # That's why we don't use version in the end.
 rm -rf $PRGNAM-toolchain-* 
 tar xvf $CWD/$PRGNAM'-toolchain-'$VERSION.tar.gz

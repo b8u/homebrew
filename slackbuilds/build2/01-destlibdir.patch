@@ -1,6 +1,6 @@
---- build.sh	2022-05-14 23:21:49.021279917 +0200
-+++ build.sh.new	2022-05-14 23:20:04.339277321 +0200
-@@ -431,12 +431,12 @@
+--- build.sh	2022-10-10 12:08:46.456483133 +0200
++++ build.sh.new	2022-10-10 12:08:01.796222720 +0200
+@@ -512,12 +512,12 @@
      ;;
    *)
      if test -n "$private"; then
@@ -16,23 +16,23 @@
  
      if test -n "$sudo"; then
        conf_sudo="$sudo"
-@@ -521,6 +521,7 @@
+@@ -602,6 +602,7 @@
  config.bin.rpath="$conf_rpath" \
  config.install.root="$idir" \
  config.install.sudo="$conf_sudo" \
 +config.install.lib="$conf_rpath" \
  $conf_exe_affixes \
- $private
- 
-@@ -583,6 +584,7 @@
- config.bin.rpath="$conf_rpath_stage" \
+ $private \
+ $system_imports
+@@ -666,6 +667,7 @@
  config.install.root="$idir" \
  config.install.data_root=root/stage \
+ config.install.sudo="$conf_sudo" \
 +config.install.lib="$conf_rpath" \
- config.install.sudo="$conf_sudo"
+ $system_imports
  
  run build2/build2/b-boot $verbose $jobs install: build2/ bpkg/
-@@ -609,6 +611,7 @@
+@@ -692,6 +694,7 @@
  config.bin.rpath="$conf_rpath" \
  config.install.root="$idir" \
  config.install.sudo="$conf_sudo" \
